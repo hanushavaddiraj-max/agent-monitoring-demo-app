@@ -6,11 +6,11 @@ export interface Endpoint {
 
 export const ENDPOINTS: Endpoint[] = [
   {
-    displayName: "Sonnet 4",
-    endpointName: "databricks-claude-sonnet-4",
-  },
-  {
     displayName: "Llama 4 Maverick",
     endpointName: "databricks-llama-4-maverick",
+  },
+  {
+    displayName: "Llama 3.3 70B",
+    endpointName: "databricks-meta-llama-3-3-70b-instruct",
   },
 ];

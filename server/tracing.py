@@ -31,17 +31,8 @@ def setup_mlflow_tracing():
   # - Tool invocations with inputs and outputs
   # - Agent executor runs with full conversation history
   # - Retriever queries and results (if using RAG)
-  mlflow.langchain.autolog(
-    log_input_examples=True,
-    log_model_signatures=True,
-    log_models=False,  # We don't need to log models, just traces
-    log_datasets=False,
-    log_inputs_outputs=True,
-    disable=False,
-    exclusive=False,
-    disable_for_unsupported_versions=False,
-    silent=False
-  )
+  # Newer MLflow versions removed some autolog kwargs (e.g. log_input_examples).
+  mlflow.langchain.autolog()
 
 
 def get_mlflow_experiment_id() -> Optional[str]:

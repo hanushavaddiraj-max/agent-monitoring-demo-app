@@ -55,7 +55,7 @@ def databricks_agent(messages: List[ChatCompletionMessageParam]) -> Dict[str, An
   """A LangChain agent that can explore Databricks catalogs and answer questions."""
   # Initialize the LLM
   llm = ChatDatabricks(
-    endpoint='databricks-claude-sonnet-4',
+    endpoint='databricks-llama-4-maverick',
     max_tokens=1000,
     temperature=0.1,
   )
